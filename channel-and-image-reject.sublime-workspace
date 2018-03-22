@@ -1,0 +1,341 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backup",
+				"backup_sum_bit"
+			],
+			[
+				"adcw",
+				"adc_width-1"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "bash",
+		"selected_items":
+		[
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"makefile",
+				"Set Syntax: Makefile"
+			],
+			[
+				"dif",
+				"Diffy Cleanup"
+			],
+			[
+				"c+",
+				"Set Syntax: C++"
+			],
+			[
+				"mat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"matlab",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"packagesy",
+				"PackageSync: Backup/Restore - Restore Packages From Zip (Recommended)"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 567.0
+	},
+	"console":
+	{
+		"height": 266.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Projects/channel-and-image-reject"
+	],
+	"file_history":
+	[
+		"/C/Users/Jon/Desktop/verilator.rb",
+		"/D/Dropbox/Berkeley/Spring 2018/EE 290C/image_reject/matlab/data_exp.csv",
+		"/D/Projects/cdr/src/test/scala/cdr/I_out.csv",
+		"/D/Projects/cdr/src/test/scala/cdr/dset1/I_out.csv",
+		"/D/Projects/cdr/src/test/scala/cdr/data_exp.csv",
+		"/D/Projects/chisel-testers/src/test/scala/examples/Adder.scala",
+		"/D/Projects/chisel-testers/src/test/scala/examples/AdvTesterSpec.scala",
+		"/D/Projects/cdr/build.sbt",
+		"/D/Projects/dsptools/build.sbt",
+		"/D/Projects/chisel-testers/build.sbt",
+		"/D/Projects/chisel3/build.sbt",
+		"/D/Projects/chisel3/project/build.properties",
+		"/D/Projects/chisel3/project/plugins.sbt",
+		"/D/Projects/firrtl-interpreter/build.sbt",
+		"/D/Projects/firrtl/build.sbt",
+		"/D/Projects/cdr/publishlocalsetup.sh",
+		"/D/Projects/cdr/test.sh",
+		"/D/Projects/publishlocalsetup.sh",
+		"/C/Projects/dsptools/src/test/scala/examples/StreamingAutocorrelatorSpec.scala",
+		"/C/Projects/dsptools/test_run_dir/simple_dsp_fix/SimpleDsp.SimpleDspModuleSpec524635841/SimpleDspModule.v",
+		"/C/Projects/dsptools/src/test/scala/examples/Demod.scala",
+		"/C/Projects/dsptools/src/test/scala/examples/ParameterizedAdderSpec.scala",
+		"/C/Projects/dsptools/src/test/scala/examples/RealAdderSpec.scala",
+		"/C/Projects/integrationtests/src/test/scala/RXControllerWithRAMTests.scala",
+		"/C/Projects/integrationtests/src/test/scala/RXControllerWithFifoTests.scala",
+		"/C/Projects/integration/build.sh",
+		"/C/Projects/cdr/build.sbt",
+		"/C/Projects/scalatest/I_out.csv",
+		"/C/Projects/integration/rocket-chip/Makefrag",
+		"/C/Projects/rfcontroller/src/main/scala/utils/FIFOUtils.scala",
+		"/C/Projects/chisel3/build.sbt",
+		"/C/Projects/firrtl-interpreter/build.sbt",
+		"/C/Projects/dsptools/build.sbt",
+		"/C/Projects/channel-and-image-reject/build.sbt",
+		"/C/Projects/cdr/project/build.properties",
+		"/C/Projects/channel-and-image-reject/project/build.properties",
+		"/C/Projects/iq_compensation/matlab/I_uns.txt",
+		"/C/Projects/sdk/run_program.sh",
+		"/C/Projects/iq_compensation/src/iq_comp.v",
+		"/C/Projects/rfcontroller/src/test/scala/utils.test/Parallel_CrcTests.scala",
+		"/C/Projects/chisel-tutorial/src/test/scala/examples/Adder4Tests.scala",
+		"/C/Projects/cdr/src/test/scala/gcd/GCDUnitTest.scala",
+		"/C/Projects/cdr/src/test/scala/gcd/GCDMain.scala",
+		"/C/Projects/cdr/src/main/scala/gcd/GCD.scala",
+		"/C/Projects/cdr/src/main/scala/cdr/CDR.scala",
+		"/C/Projects/chisel-template/src/test/scala/gcd/GCDUnitTest.scala",
+		"/C/Projects/dsptools/project/plugins.sbt",
+		"/C/Projects/dsptools/project/build.properties",
+		"/C/Projects/channel-and-image-reject/project/plugins.sbt",
+		"/C/Projects/dsptools/src/main/scala/examples/StreamingAutocorrelator.scala",
+		"/C/Projects/dsptools/src/main/scala/examples/TransposedStreamingFIR.scala",
+		"/C/Projects/dsptools/src/main/scala/examples/gainOffCorr.scala",
+		"/C/Projects/dsptools/.install_verilator.sh",
+		"/C/Projects/channel-and-image-reject/dsp-framework/dsptools/src/test/scala/examples/ComplexAdderSpec.scala",
+		"/C/Projects/channel-and-image-reject/dsp-framework/Makefile",
+		"/C/Projects/channel-and-image-reject/dsp-framework/dsptools/src/test/scala/examples/Demod.scala",
+		"/C/Projects/firrtl/build.sbt",
+		"/C/Projects/channel-and-image-reject/Makefrag",
+		"/C/Projects/channel-and-image-reject/Makefile",
+		"/C/Projects/Chisel3DSPDependencies/setenv.bash",
+		"/C/Projects/channel-and-image-reject/dsp-framework/firrtl-interpreter/build.sbt",
+		"/C/Projects/channel-and-image-reject/dsp-framework/dsptools/src/test/scala/examples/TestVectors.scala",
+		"/C/Projects/channel-and-image-reject/dsp-framework/dsptools/src/main/scala/examples/gainOffCorr.scala",
+		"/C/Projects/channel-and-image-reject/dsp-framework/dsptools/src/main/scala/examples/StreamingAutocorrelator.scala",
+		"/C/Projects/channel-and-image-reject/dsp-framework/Makefrag",
+		"/C/Projects/channel-and-image-reject/README.md",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/Parity.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/SimpleALU.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/HiLoMultiplier.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/VecSearch.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/ResetShiftRegister.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/LogShifter.scala",
+		"/C/Projects/chisel-tutorial/src/test/scala/examples/Launcher.scala",
+		"/C/Projects/chisel-tutorial/run-examples.sh",
+		"/C/Projects/chisel-tutorial/build.sbt",
+		"/C/Projects/riscv-tools/build.sh",
+		"/C/Projects/riscv-tools/build.common",
+		"/C/Projects/cdr/src/test/scala/cdr/Bit_To_ByteTests.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/Risc.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/EnableShiftRegister.scala",
+		"/C/Projects/chisel-tutorial/src/test/scala/utils/TutorialRunner.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/solutions/Adder.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/hello/Hello.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/Adder.scala",
+		"/C/Projects/chisel-tutorial/src/main/scala/examples/FullAdder.scala",
+		"/C/Projects/iq_compensation/matlab/IQ_imbal_IF_v4.m",
+		"/C/Projects/riscv-gnu-toolchain/Makefile",
+		"/C/Projects/iq_compensation/src/iq_comp_testbench.v",
+		"/C/Users/bzisj/Dropbox/Berkeley/Spring 2018/EE 290C/image_reject/matlab/imrej.m",
+		"/C/Projects/rfcontroller/src/main/scala/utils/Parallel_CRC.scala",
+		"/C/Projects/rfcontroller/src/main/scala/utils/Idle_Whitening.scala",
+		"/C/Projects/rfcontroller/src/main/scala/utils/Serial_Whitening.scala",
+		"/C/Projects/rfcontroller/src/main/scala/utils/Whitening.scala",
+		"/C/Projects/rfcontroller/src/test/scala/utils.test/WhiteningTests.scala",
+		"/C/Projects/rfcontroller/test_run_dir/utils.test.WhiteningTester955796908/VWhitening.cpp",
+		"/C/Users/bzisj/Downloads/modelsim-pe_student_edition/Disk1/SETUP.INI",
+		"/C/Projects/rfcontroller/project/build.properties",
+		"/C/Users/bzisj/AppData/Local/Temp/scp28013/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/mos_plot.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp49570/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/mos_plot_cas.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp35830/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/bag_testbenches_ec/verification_ec/mos/query.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp08779/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_ibias_ft_sol.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp30657/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/mos_query.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp37763/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/specs_mos_char/nch_w0d5.yaml",
+		"/C/Users/bzisj/AppData/Local/Temp/scp35422/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/BagModules/ee240b_mos_char/tb_mos_ft.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp35722/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/BagModules/ee240b_mos_char/tb_mos_ibias.py",
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE251A/Lab/Lab 4/fifo.v",
+		"/C/Users/bzisj/AppData/Local/Temp/Rar$DIa36792.18413/dgemm-blocked.c",
+		"/C/Users/bzisj/AppData/Local/Temp/Rar$DIa36792.19901/dgemm-blas.c",
+		"/C/Projects/194_pcb/.gitignore",
+		"/C/Users/bzisj/AppData/Local/Packages/microsoft.windowscommunicationsapps_8wekyb3d8bbwe/LocalState/Files/S0/1363/hot_dsn-review[1810].txt",
+		"/C/Projects/freq_estimation/src/freq_est.v",
+		"/C/Users/bzisj/AppData/Local/Temp/scp42085/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_igain_char.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp04224/home/cc/cs199/fa13/class/cs199-blv/ee240b/hw_sols/bag_workspace_gpdk045/scripts_char/hw1_ibias_char.py",
+		"/C/Users/bzisj/AppData/Local/Temp/scp04955/home/cc/cs199/fa13/class/cs199-blv/ee240b/hw_sols/bag_workspace_gpdk045/scripts_char/hw1_ibias_char_sol.py",
+		"/C/Users/bzisj/AppData/Local/Temp/Rar$DIa29092.7295/Installation_Readme.txt",
+		"/C/Users/bzisj/AppData/Local/Temp/scp16907/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_igain_char.py",
+		"/C/Projects/cdr/README.md",
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW10/hw10_2.m",
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW10/HW10.m",
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW9/HW9.m",
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW8/HW8.m",
+		"/C/Users/bzisj/AppData/Local/Temp/scp53625/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_ibias_char.py",
+		"/C/Users/bzisj/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/bzisj/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/C/Projects/iq_compensation/matlab/TR_model.m",
+		"/C/Projects/cdr/.gitignore",
+		"/C/Users/bzisj/Desktop/MEMORY.DMP",
+		"/C/Projects/scm-digital/src/hw/scm_v2/uRobotDigitalController/TOP_SYS.v"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 208.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 71.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "channel-and-image-reject.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
