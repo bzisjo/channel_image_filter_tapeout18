@@ -15,6 +15,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/main/scala/utils/FIRfilter.scala",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -85,7 +93,12 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Projects/channel-and-image-reject"
+		"/D/Projects/channel-and-image-reject",
+		"/D/Projects/channel-and-image-reject/src",
+		"/D/Projects/channel-and-image-reject/src/main",
+		"/D/Projects/channel-and-image-reject/src/main/scala",
+		"/D/Projects/channel-and-image-reject/src/main/scala/examples",
+		"/D/Projects/channel-and-image-reject/src/main/scala/utils"
 	],
 	"file_history":
 	[
@@ -251,8 +264,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/main/scala/utils/FIRfilter.scala",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Scala/Scala.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -333,7 +376,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 176.0,
+	"side_bar_width": 257.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
