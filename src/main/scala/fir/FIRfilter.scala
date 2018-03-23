@@ -6,22 +6,26 @@ import chisel3.util._
 import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 
 
-class FIRfilter(length: Int, bitwidth: Int, import_coeffs: Seq[Int]) extends Module{
+class FIRfilter(length: Int, inputwidth: Int, filterwidth: Int, import_coeffs: Seq[SInt]) extends Module{
 	val io = IO(new Bundle {
-		val in = Input(SInt(bitwidth.W))
-		val out = Output(SInt(bitwidth*2+length-1).W))	// figure out bit growth later
+		val in = Input(SInt(inputwidth.W))
+		val out = Output(SInt(filterwidth*2+length-1).W))	// figure out bit growth later
 	})
 
+	// map coeffs to SInts
+	// val coeffs = import_coeffs.map(_.S)
+	val coeffs = import_coeffs
 
-	val coeffs = import_coeffs.map(_.S)
-
-	val delays = Seq.fill(length)(Wire(UInt(bitwidth.W))).scan(io.in)(prev: SInt, next: SInt) => {
+	// create an array holding the output of the delays
+	val delays = Seq.fill(length)(Wire(SInt(inputwidth.W))).scan(io.in)(prev: SInt, next: SInt) => {
 		next := RegNext(prev)
 		next
 	}
 
-	val mults = delays.zip(coeffs).map { case(delay: UInt, coeff: UInt) => delay * coeff }
+	// multiply, storing results in 'mults'
+	val mults = delays.zip(coeffs).map { case(delay: SInt, coeff: SInt) => delay * coeff }
 
+	// add up multiplier outputs with bit growth
 	val result = mults.reduce(_+&_)
 
 	io.out := result
