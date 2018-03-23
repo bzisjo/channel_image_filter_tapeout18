@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"icoef",
+				"icoeffs_file"
+			],
+			[
+				"rc",
+				"rcoeffs_file"
+			],
+			[
 				"backup",
 				"backup_sum_bit"
 			],
@@ -16,11 +24,47 @@
 	"buffers":
 	[
 		{
-			"file": "src/main/scala/utils/FIRfilter.scala",
+			"file": "build.sbt",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 1641,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/test/scala/fir/IRCSfilterTesterSpec.scala",
+			"settings":
+			{
+				"buffer_size": 1861,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/scala/fir/IRCSfilter.scala",
+			"settings":
+			{
+				"buffer_size": 949,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/scala/fir/FIRfilter.scala",
+			"settings":
+			{
+				"buffer_size": 903,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Projects/integration/integrationtests/tx_rx_utils/src/main/scala/utils/FIRFilter.scala",
+			"settings":
+			{
+				"buffer_size": 1922,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -93,15 +137,27 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Projects/channel-and-image-reject",
-		"/D/Projects/channel-and-image-reject/src",
-		"/D/Projects/channel-and-image-reject/src/main",
-		"/D/Projects/channel-and-image-reject/src/main/scala",
-		"/D/Projects/channel-and-image-reject/src/main/scala/examples",
-		"/D/Projects/channel-and-image-reject/src/main/scala/utils"
+		"/C/Projects/channel-and-image-reject",
+		"/C/Projects/channel-and-image-reject/src",
+		"/C/Projects/channel-and-image-reject/src/main",
+		"/C/Projects/channel-and-image-reject/src/main/scala",
+		"/C/Projects/channel-and-image-reject/src/main/scala/fir",
+		"/C/Projects/channel-and-image-reject/src/test",
+		"/C/Projects/channel-and-image-reject/src/test/scala",
+		"/C/Projects/channel-and-image-reject/src/test/scala/fir"
 	],
 	"file_history":
 	[
+		"/C/Projects/integrationtests/src/main/scala/TXControllerWithModulator.scala",
+		"/C/Projects/integrationtests/src/main/scala/RXControllerWithFifo.scala",
+		"/C/Projects/integrationtests/src/main/scala/RXControllerWithCDR.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/ZeroCrossCounter.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/ModulatorTop.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/ClockDataRecoveryStateMachine.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/ClockDataRecovery.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/FIRFilter.scala",
+		"/C/Projects/integrationtests/tx_rx_utils/src/main/scala/utils/Modulator.scala",
+		"/C/Projects/channel-and-image-reject/src/main/scala/utils/FIRfilter.scala",
 		"/C/Users/Jon/Desktop/verilator.rb",
 		"/D/Dropbox/Berkeley/Spring 2018/EE 290C/image_reject/matlab/data_exp.csv",
 		"/D/Projects/cdr/src/test/scala/cdr/I_out.csv",
@@ -219,21 +275,11 @@
 		"/C/Users/bzisj/AppData/Local/Temp/Rar$DIa29092.7295/Installation_Readme.txt",
 		"/C/Users/bzisj/AppData/Local/Temp/scp16907/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_igain_char.py",
 		"/C/Projects/cdr/README.md",
-		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW10/hw10_2.m",
-		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW10/HW10.m",
-		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW9/HW9.m",
-		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW8/HW8.m",
-		"/C/Users/bzisj/AppData/Local/Temp/scp53625/home/cc/cs199/fa13/class/cs199-blv/ee240b/bag_workspace_gpdk045/scripts_char/hw1_ibias_char.py",
-		"/C/Users/bzisj/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
-		"/C/Users/bzisj/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-		"/C/Projects/iq_compensation/matlab/TR_model.m",
-		"/C/Projects/cdr/.gitignore",
-		"/C/Users/bzisj/Desktop/MEMORY.DMP",
-		"/C/Projects/scm-digital/src/hw/scm_v2/uRobotDigitalController/TOP_SYS.v"
+		"/C/Users/bzisj/Dropbox/Berkeley/Fall 2017/EE240A/Homework/HW10/hw10_2.m"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 80.0
 	},
 	"find_in_files":
 	{
@@ -247,6 +293,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"length"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -264,30 +311,60 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/main/scala/utils/FIRfilter.scala",
+					"file": "build.sbt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 1641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								1118,
+								1118
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
-							"syntax": "Packages/Scala/Scala.sublime-syntax"
+							"syntax": "Packages/Scala/Scala.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/test/scala/fir/IRCSfilterTesterSpec.scala",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								336
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Scala/Scala.sublime-syntax",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -295,13 +372,102 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main/scala/fir/IRCSfilter.scala",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								946,
+								946
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Scala/Scala.sublime-syntax",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/main/scala/fir/FIRfilter.scala",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								46
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Scala/Scala.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Projects/integration/integrationtests/tx_rx_utils/src/main/scala/utils/FIRFilter.scala",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								719,
+								719
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Scala/Scala.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 45.0
 	},
 	"input":
 	{
@@ -338,7 +504,7 @@
 	"project": "channel-and-image-reject.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 84.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -376,7 +542,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 448.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

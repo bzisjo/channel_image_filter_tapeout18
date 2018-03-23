@@ -14,16 +14,16 @@ class IRCSfilter(length: Int, inputwidth: Int, filterwidth: Int, import_rcoeffs:
 	})
 
 	val isig_filter = Module(new FIRfilter(length = length, inputwidth = inputwidth, filterwidth = filterwidth, import_coeffs = import_rcoeffs))
-	val x1 = Wire(SInt(filterwidth*2+length-1))
+	val x1 = Wire(SInt((filterwidth*2+length-1).W))
 	isig_filter.io.in := io.isig
 	x1 := isig_filter.io.out
 
 
 	val qsig_filter = Module(new FIRfilter(length = length, inputwidth = inputwidth, filterwidth = filterwidth, import_coeffs = import_icoeffs))
-	val x2 = Wire(SInt(filterwidth*2+length-1))
-	qsig.filter.io.in := io.qsig
+	val x2 = Wire(SInt((filterwidth*2+length-1).W))
+	qsig_filter.io.in := io.qsig
 	x2 := qsig_filter.io.out
 
-	isig_out := (x1 +& x2) >> 11.U
+	io.isig_out := (x1 +& x2) >> 11.U
 
 }
