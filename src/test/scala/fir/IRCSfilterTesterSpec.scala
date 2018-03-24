@@ -35,7 +35,7 @@ class IRCSfilterTester(c: IRCSfilter) extends PeekPokeTester(c) {
 	val writer = new PrintWriter(new File("isig_out.csv"))
 
 	for(v <- isig_out) {
-		writer.write(v.toString + ", ")
+		writer.write(v.toString + ",")
 	}
 	writer.close()
 
