@@ -10,8 +10,15 @@ import java.io.PrintWriter
 import scala.io.Source
 
 class IRCSfilterTester(c: IRCSfilter) extends PeekPokeTester(c) {
-	val isig_file = "./src/test/scala/fir/I_out.csv"
-	val qsig_file = "./src/test/scala/fir/Q_out.csv"
+	// val isig_file = "./src/test/scala/fir/I_side.csv"
+	// val qsig_file = "./src/test/scala/fir/Q_side.csv"
+	// val writer = new PrintWriter(new File("isig_side.csv"))
+	// val isig_file = "./src/test/scala/fir/I_image.csv"
+	// val qsig_file = "./src/test/scala/fir/Q_image.csv"
+	// val writer = new PrintWriter(new File("isig_image.csv"))
+	val isig_file = "./src/test/scala/fir/I_both.csv"
+	val qsig_file = "./src/test/scala/fir/Q_both.csv"
+	val writer = new PrintWriter(new File("isig_both.csv"))
 	val isig = Source.fromFile(isig_file).getLines().next.split(",").map(_.trim).map(_.toInt).toSeq
 	val qsig = Source.fromFile(qsig_file).getLines().next.split(",").map(_.trim).map(_.toInt).toSeq
 	assert(isig.length == qsig.length)
@@ -32,7 +39,6 @@ class IRCSfilterTester(c: IRCSfilter) extends PeekPokeTester(c) {
 		isig_out = isig_out :+ peek(c.io.isig_out).toInt		
 	}
 	
-	val writer = new PrintWriter(new File("isig_out.csv"))
 
 	for(v <- isig_out) {
 		writer.write(v.toString + ",")

@@ -9,7 +9,7 @@ import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 class FIRfilter(length: Int, inputwidth: Int, filterwidth: Int, import_coeffs: Seq[SInt]) extends Module{
 	val io = IO(new Bundle {
 		val in = Input(SInt(inputwidth.W))
-		val out = Output(SInt((filterwidth*2+length-1).W))	// figure out bit growth later
+		val out = Output(SInt((filterwidth*3).W))	// figure out bit growth later
 	})
 
 	// map coeffs to SInts
