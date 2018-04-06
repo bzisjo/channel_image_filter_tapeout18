@@ -3,7 +3,6 @@ package fir
 import chisel3._
 import chisel3._
 import chisel3.util._
-import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 
 
 class FIRfilter(length: Int, inputwidth: Int, filterwidth: Int, import_coeffs: Seq[SInt]) extends Module{
