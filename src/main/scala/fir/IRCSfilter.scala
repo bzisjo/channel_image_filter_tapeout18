@@ -3,7 +3,7 @@ package fir
 import chisel3._
 import chisel3.util._
 
-class IRCSfilter(length: Int, inputwidth: Int, filterwidth: Int, import_rcoeffs: Seq[SInt], import_icoeffs: Seq[SInt]) extends Module {
+class IRCSfilter(length: Int, inputwidth: Int, filterwidth: Int, scalingfactor: Int, import_rcoeffs: Seq[SInt], import_icoeffs: Seq[SInt]) extends Module {
 
 	val io = IO(new Bundle {
 		val isig = Input(SInt(inputwidth.W))
@@ -22,6 +22,6 @@ class IRCSfilter(length: Int, inputwidth: Int, filterwidth: Int, import_rcoeffs:
 	qsig_filter.io.in := io.qsig
 	x2 := qsig_filter.io.out
 
-	io.isig_out := (x1 +& x2) >> 11.U
+	io.isig_out := (x1 +& x2) >> scalingfactor.U
 
 }

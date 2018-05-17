@@ -48,6 +48,12 @@ maxscalingfactor = min(scalingfactorreal, scalingfactorimag);
 Hbpreal = round(real(Hbp) * maxscalingfactor);
 Hbpimag = round(imag(Hbp) * maxscalingfactor);
 
+%% Quantize the filter to 5-bits
+scalingfactorreal = min(abs(-16/min(real(Hbp))), abs(15/max(real(Hbp))));
+scalingfactorimag = min(abs(-16/min(imag(Hbp))), abs(15/max(imag(Hbp))));
+maxscalingfactor = min(scalingfactorreal, scalingfactorimag);
+Hbpreal = round(real(Hbp) * maxscalingfactor);
+Hbpimag = round(imag(Hbp) * maxscalingfactor);
 %% Export filter coeffs
 % These are the image rejection/channel selection filter coefficients
 csvwrite("rcoeffs.csv", Hbpreal)
@@ -84,17 +90,56 @@ t = 0:dT_matlab:(length(FSK)-1)*dT_matlab;
 
 FSK_pure = FSK;
 
-%% Generate side channel tone
+
+%% Generate data and modulate as RF side channel (dependent on prev block)
 sidechannel_freq = 2e6;
-side = RF_ampl * sin(2*pi*(RF_freq + sidechannel_freq)*t);
-%% Add side channel to main signal
+data_side = randi([0 1],num_bits,1);
+data_side = data_side*2-1;
+
+t = 0:1/Fs_matlab:T-1/Fs_matlab;
+phase = 2*pi*((RF_freq+sidechannel_freq)+data_side(1)*freq_shift)*t;
+phase_last = phase(end);
+
+t = 1/Fs_matlab:1/Fs_matlab:T;
+for x=2:1:length(data_side)
+    phase = [phase 2*pi*((RF_freq+sidechannel_freq)+data_side(x)*freq_shift)*t + phase_last];
+    phase_last = phase(end);
+end
+
+side = RF_ampl * sin(phase);
+side = side(1:length(FSK_pure));
 FSK = FSK + side;
 
-%% Generate image channel tone
+%% Generate data and modulate as RF image (dependent on prev block)
+num_bits_im = ceil(num_bits*1.5);
 RF_freq_image = LO_freq-IF;
-image = RF_ampl * sin(2*pi*(RF_freq_image)*t);
-%% Add image channel to main signal
+data_image = randi([0 1],num_bits_im,1);
+data_image = data_image*2-1;
+
+t = 0:1/Fs_matlab:T-1/Fs_matlab;
+phase = 2*pi*((RF_freq_image)+data_image(1)*freq_shift)*t;
+phase_last = phase(end);
+
+t = 1/Fs_matlab:1/Fs_matlab:T;
+for x=2:1:length(data_image)
+    phase = [phase 2*pi*((RF_freq_image)+data_image(x)*freq_shift)*t + phase_last];
+    phase_last = phase(end);
+end
+
+image = RF_ampl * sin(phase);
+image = image(1:length(FSK_pure));
 FSK = FSK + image;
+%% Generate side channel tone
+% sidechannel_freq = 2e6;
+% side = RF_ampl * sin(2*pi*(RF_freq + sidechannel_freq)*t);
+%% Add side channel to main signal
+% FSK = FSK + side;
+
+%% Generate image channel tone
+% RF_freq_image = LO_freq-IF;
+% image = RF_ampl * sin(2*pi*(RF_freq_image)*t);
+%% Add image channel to main signal
+% FSK = FSK + image;
 
 %% Mix and match zone
 % FSK_pure, side, image can be added at will to form waveform-of-interest
@@ -208,9 +253,10 @@ plot(f, abs(X_shift))
 %% If we want to export post-filter signals, do so here
 
 %% Downscale back to 5-bit resolution
-scalingfactor = 2^11;           % This is set to a hard value so that when there's noise, the remaining signal is less
-I = round(Iout/2^11);
-Q = round(Qout/2^11);
+% scalingfactor = 2^11;           % This is set to a hard value so that when there's noise, the remaining signal is less
+scalingfactor = 2^8;            % 5-bit filters
+I = round(Iout/scalingfactor);
+Q = round(Qout/scalingfactor);
 
 %% 2-Sided FFT for checking purposes
 X=fft(I);

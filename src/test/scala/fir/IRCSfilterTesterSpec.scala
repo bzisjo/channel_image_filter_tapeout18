@@ -58,7 +58,7 @@ class IRCSfilterTesterSpec extends FreeSpec with Matchers {
 	val rcoeffs:Seq[SInt] = Source.fromFile(rcoeffs_file).getLines().next.split(",").map(_.trim).map(_.toInt).map(_.asSInt).toSeq
 	val icoeffs:Seq[SInt] = Source.fromFile(icoeffs_file).getLines().next.split(",").map(_.trim).map(_.toInt).map(_.asSInt).toSeq
 	"tester should filter things" in {
-		iotesters.Driver.execute(Array("--backend-name", "firrtl", "--target-dir", "test_run_dir", "--fint-write-vcd"), () => new IRCSfilter(length = rcoeffs.length, inputwidth = 5, filterwidth = 8, import_rcoeffs = rcoeffs, import_icoeffs = icoeffs)) { c =>
+		iotesters.Driver.execute(Array("--backend-name", "firrtl", "--target-dir", "test_run_dir", "--fint-write-vcd"), () => new IRCSfilter(length = rcoeffs.length, inputwidth = 5, filterwidth = 5, scalingfactor = 8, import_rcoeffs = rcoeffs, import_icoeffs = icoeffs)) { c =>
 			new IRCSfilterTester(c)
 		} should be (true)
 	}
