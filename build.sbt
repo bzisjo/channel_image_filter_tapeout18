@@ -26,11 +26,11 @@ def javacOptionsVersion(scalaVersion: String): Seq[String] = {
 
 name := "channel-and-image-reject"
 
-version := "3.0.0"
+version := "1.0.0"
 
-scalaVersion := "2.11.12"
+scalaVersion := "2.12.4"
 
-crossScalaVersions := Seq("2.11.11", "2.12.3")
+crossScalaVersions := Seq("2.12.4", "2.11.12")
 
 resolvers ++= Seq(
   Resolver.sonatypeRepo("snapshots"),
@@ -38,16 +38,11 @@ resolvers ++= Seq(
 )
 
 // Provide a managed dependency on X if -DXVersion="" is supplied on the command line.
-// val defaultVersions = Map(
-//   "chisel3" -> "3.2-SNAPSHOT",
-//   "chisel-iotesters" -> "1.3-SNAPSHOT",
-//   "dsptools" -> "1.2-SNAPSHOT"
-//   )
 val defaultVersions = Map(
-  "chisel3" -> "3.1.0",
-  "chisel-iotesters" -> "1.2.0",
+  "chisel3" -> "3.2-SNAPSHOT",
+  "chisel-iotesters" -> "1.2.+",
   "dsptools" -> "1.1.0"
-  )
+)
 
 libraryDependencies ++= (Seq("chisel3","chisel-iotesters","dsptools").map {
   dep: String => "edu.berkeley.cs" %% dep % sys.props.getOrElse(dep + "Version", defaultVersions(dep)) })
